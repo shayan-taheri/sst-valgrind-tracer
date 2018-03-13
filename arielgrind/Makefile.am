@@ -3,15 +3,15 @@ include $(top_srcdir)/Makefile.tool.am
 EXTRA_DIST = docs/nl-manual.xml
 
 #----------------------------------------------------------------------------
-# none-<platform>
+# arielgrind-<platform>
 #----------------------------------------------------------------------------
 
-noinst_PROGRAMS  = none-@VGCONF_ARCH_PRI@-@VGCONF_OS@
+noinst_PROGRAMS  = arielgrind-@VGCONF_ARCH_PRI@-@VGCONF_OS@
 if VGCONF_HAVE_PLATFORM_SEC
-noinst_PROGRAMS += none-@VGCONF_ARCH_SEC@-@VGCONF_OS@
+noinst_PROGRAMS += arielgrind-@VGCONF_ARCH_SEC@-@VGCONF_OS@
 endif
 
-ARIELGRIND_SOURCES_COMMON = nl_main.c
+ARIELGRIND_SOURCES_COMMON = ag_main.c
 
 arielgrind_@VGCONF_ARCH_PRI@_@VGCONF_OS@_SOURCES      = \
 	$(ARIELGRIND_SOURCES_COMMON)
